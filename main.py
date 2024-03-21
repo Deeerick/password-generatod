@@ -18,6 +18,7 @@ while True:
         if opcao.lower() == 's':
             break
         elif opcao.lower() == 'n':
+            print("Finalizando o programa...")
             exit()
         else:
             print("Opção inválida. Por favor, responda com 'S' ou 'N'.")
