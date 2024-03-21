@@ -3,22 +3,22 @@ print('=' * 10 + '\033[91m 🚨 Password Generator 🚨 \033[0m' + '=' * 10)
 import random
 import string
 
-def gerar_senha(tamanho):
-    caracteres = string.ascii_letters + string.digits + string.digits + "!@#?" * 2
-    senha = ''.join(random.choice(caracteres) for _ in range(tamanho))
-    return senha
+def gerador(length):
+    character = string.ascii_letters + string.digits + string.digits + "!@#?" * 2
+    password = ''.join(random.choice(character) for _ in range(length))
+    return password
 
 while True:
-    tamanho_senha = int(input("Qual o tamanho da senha? "))
-    senha_gerada = gerar_senha(tamanho_senha)
-    print("Sua senha é: ", senha_gerada)
+    password_length = int(input("\033[91m > Qual o tamanho da senha? \033[0m"))
+    generated_password = gerador(password_length)
+    print("\033[91m > Sua senha é:  \033[0m", generated_password)
 
     while True:
-        opcao = input("Deseja refazer a senha? (S/N): ")
-        if opcao.lower() == 's':
+        opcao = input("\033[91m > Deseja refazer a senha? (Y/N):  \033[0m")
+        if opcao.lower() == 'y':
             break
         elif opcao.lower() == 'n':
-            print("Finalizando o programa...")
+            print("\033[91m > Finalizando o programa... \033[0m")
             exit()
         else:
-            print("Opção inválida. Por favor, responda com 'S' ou 'N'.")
+            print("\033[91m > Opção inválida. Por favor, responda com 'S' ou 'N'. \033[0m")
